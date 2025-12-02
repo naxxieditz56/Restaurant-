@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head as index.html -->
+    <title>Reservations | Jack Fry's Restaurant</title>
+</head>
+<body>
+    <!-- Same header as index.html -->
+    
+    <main class="page-content">
+        <!-- Hero Section -->
+        <section class="page-hero" style="background-image: url('images/interior/reservations.jpg');">
+            <div class="container">
+                <h1>Reservations</h1>
+                <p>Book your table for an unforgettable dining experience</p>
+            </div>
+        </section>
+
+        <!-- Reservation Form/Widget -->
+        <section class="reservation-section">
+            <div class="container">
+                <div class="reservation-wrapper">
+                    <!-- OpenTable Widget -->
+                    <div class="opentable-widget">
+                        <h2>Book Online</h2>
+                        <!-- OpenTable iframe or custom form -->
+                        <div class="reservation-form">
+                            <form id="reservation-form">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="date">Date *</label>
+                                        <input type="date" id="date" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="time">Time *</label>
+                                        <select id="time" required>
+                                            <option value="">Select Time</option>
+                                            <option value="17:30">5:30 PM</option>
+                                            <option value="18:00">6:00 PM</option>
+                                            <option value="18:30">6:30 PM</option>
+                                            <!-- More times -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="party-size">Party Size *</label>
+                                        <select id="party-size" required>
+                                            <option value="">Number of Guests</option>
+                                            <option value="1">1 Person</option>
+                                            <option value="2">2 People</option>
+                                            <option value="3">3 People</option>
+                                            <!-- Up to 14 -->
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="special-requests">Special Requests</label>
+                                    <textarea id="special-requests" rows="3" placeholder="Accessibility needs, allergies, celebrations..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Check Availability</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Alternative Booking -->
+                    <div class="alternative-booking">
+                        <h2>Other Ways to Book</h2>
+                        <div class="booking-option">
+                            <i class="fas fa-phone"></i>
+                            <h3>By Phone</h3>
+                            <p>Call us at <a href="tel:5024529244">(502) 452-9244</a></p>
+                            <p class="note">Our host team is available during business hours</p>
+                        </div>
+                        <div class="booking-option">
+                            <i class="fas fa-walking"></i>
+                            <h3>Walk-Ins Welcome</h3>
+                            <p>Bar seating available first-come, first-served</p>
+                            <p class="note">Full dining service at the bar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policies -->
+        <section class="reservation-policies">
+            <div class="container">
+                <h2 class="section-title">Reservation Policies</h2>
+                <div class="policies-grid">
+                    <div class="policy">
+                        <h3><i class="fas fa-users"></i> Group Size</h3>
+                        <p>We accommodate parties up to 14 guests. For larger groups, please contact us about private events.</p>
+                    </div>
+                    <div class="policy">
+                        <h3><i class="fas fa-clock"></i> Time Slots</h3>
+                        <p>Reservations are held for 15 minutes past your booking time. Please call if running late.</p>
+                    </div>
+                    <div class="policy">
+                        <h3><i class="fas fa-wheelchair"></i> Accessibility</h3>
+                        <p>Please inform us of any accessibility needs when booking so we can ensure appropriate seating.</p>
+                    </div>
+                    <div class="policy">
+                        <h3><i class="fas fa-utensils"></i> Special Occasions</h3>
+                        <p>Celebrating? Let us know! We'll do our best to make your occasion memorable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Holiday Booking -->
+        <section class="holiday-booking">
+            <div class="container">
+                <div class="holiday-notice">
+                    <h3><i class="fas fa-star"></i> Special Event Bookings</h3>
+                    <p><strong>Kentucky Derby Week:</strong> Reservations are taken only via phone during this period. Please call (502) 452-9244 for Derby week bookings.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Same footer as index.html -->
+    <script src="js/reservations.js"></script>
+</body>
+</html>
