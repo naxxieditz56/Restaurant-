@@ -1,0 +1,159 @@
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .history-preview .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .history-image {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header */
+    .header-top {
+        flex-wrap: wrap;
+    }
+    
+    .header-contact {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .main-nav {
+        display: none;
+        width: 100%;
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        border-top: none;
+        padding: 0;
+    }
+    
+    .main-nav a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    /* Hero */
+    .hero {
+        height: 60vh;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+    
+    /* Timeline */
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: row !important;
+    }
+    
+    .timeline-year {
+        flex: 0 0 80px;
+        margin: 0 10px 0 0;
+    }
+    
+    /* Menu Tabs */
+    .menu-tabs {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+    }
+    
+    .menu-tab {
+        flex-shrink: 0;
+    }
+    
+    /* Footer */
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .legal-links {
+        justify-content: center;
+    }
+    
+    /* Forms */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form-section,
+    .reservation-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .parking-details {
+        grid-template-columns: 1fr;
+    }
+}
