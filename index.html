@@ -6,238 +6,341 @@
     <meta name="description" content="Jack Fry's Restaurant - Louisville's historic fine dining establishment since 1933">
     <title>Jack Fry's Restaurant | Louisville Fine Dining Since 1933</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-    <!-- Accessibility Skip Link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>🎉 Celebrating 90+ years of fine dining in Louisville! <a href="about.html#history">Explore our history →</a></p>
+    </div>
 
     <!-- Header & Navigation -->
     <header class="main-header">
-        <div class="container">
-            <div class="header-top">
-                <div class="logo">
-                    <a href="index.html">
-                        <h1>Jack Fry's</h1>
-                        <span class="tagline">Since 1933</span>
-                    </a>
-                </div>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <h1>JACK FRY'S</h1>
+                    <p class="tagline">Since 1933</p>
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="menu-dropdown">
+                        <a href="menu.html">Menu <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="menu.html#lunch">Lunch</a>
+                            <a href="menu.html#dinner">Dinner</a>
+                            <a href="menu.html#desserts">Desserts</a>
+                            <a href="menu.html#cocktails">Cocktails</a>
+                            <a href="menu.html#wine">Wine List</a>
+                        </div>
+                    </li>
+                    <li><a href="reservations.html">Reservations</a></li>
+                    <li><a href="private-dining.html">Private Dining</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="location-contact.html">Contact</a></li>
+                </ul>
                 
-                <div class="header-contact">
+                <div class="nav-cta">
+                    <a href="reservations.html" class="btn btn-primary">Reserve Table</a>
                     <a href="tel:5024529244" class="phone-link">
                         <i class="fas fa-phone"></i> (502) 452-9244
                     </a>
-                    <a href="reservations.html" class="btn-reserve">Reserve Now</a>
                 </div>
-
-                <button class="menu-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-
-            <nav class="main-nav" aria-label="Main Navigation">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="reservations.html">Reservations</a></li>
-                    <li><a href="events.html">Private Events</a></li>
-                    <li><a href="giftcards.html">Gift Cards</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="testimonials.html">Reviews</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="main-content">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <h2 class="hero-title">You're a stranger here, but once!</h2>
-                <p class="hero-subtitle">Historic Louisville fine dining since 1933</p>
-                <div class="hero-buttons">
-                    <a href="reservations.html" class="btn btn-primary">Make a Reservation</a>
-                    <a href="menu.html" class="btn btn-secondary">View Our Menu</a>
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero/dining-room.jpg');">
+                <div class="hero-content">
+                    <h2 class="hero-title">You're a stranger here, but once!</h2>
+                    <p class="hero-subtitle">Louisville's historic fine dining experience since 1933</p>
+                    <div class="hero-buttons">
+                        <a href="reservations.html" class="btn btn-large btn-primary">Reserve Your Table</a>
+                        <a href="menu.html" class="btn btn-large btn-secondary">View Our Menu</a>
+                    </div>
                 </div>
+            </div>
+        </div>
+        
+        <div class="hero-features">
+            <div class="feature">
+                <i class="fas fa-award"></i>
+                <span>Best Romantic Restaurant 2024</span>
+            </div>
+            <div class="feature">
+                <i class="fas fa-clock"></i>
+                <span>Open 7 Days • Dinner 5:30-11PM</span>
+            </div>
+            <div class="feature">
+                <i class="fas fa-parking"></i>
+                <span>Valet Parking Fri & Sat</span>
             </div>
         </div>
     </section>
 
-    <!-- Quick Info Bar -->
-    <section class="quick-info">
-        <div class="container">
-            <div class="info-grid">
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <h3>Hours</h3>
-                        <p>Lunch: Mon-Fri 11am-2:30pm</p>
-                        <p>Dinner: Nightly from 5:30pm</p>
+    <!-- Main Content -->
+    <main>
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-content">
+                        <h2 class="section-title">A Louisville Tradition Since 1933</h2>
+                        <p>Jack Fry's has been a cornerstone of Louisville's dining scene for over nine decades. What began as a sportsman's hangout has evolved into a fine dining institution, blending Southern hospitality with exceptional cuisine.</p>
+                        <p>Our historic walls, adorned with vintage photographs, tell the story of our rich heritage while our kitchen creates contemporary Southern and American bistro fare with French influences.</p>
+                        <a href="about.html" class="btn btn-outline">Discover Our Story</a>
                     </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h3>Location</h3>
-                        <p>1007 Bardstown Road</p>
-                        <p>Louisville, KY 40204</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-car"></i>
-                    <div>
-                        <h3>Parking</h3>
-                        <p>Valet Fri & Sat Evenings</p>
-                        <p>Free Street Parking</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-utensils"></i>
-                    <div>
-                        <h3>Cuisine</h3>
-                        <p>Southern & American Bistro</p>
-                        <p>Fine Dining Experience</p>
+                    <div class="intro-image">
+                        <img src="images/hero/historic-bar.jpg" alt="Jack Fry's historic bar from 1933" loading="lazy">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Featured Dishes -->
-    <section class="featured-dishes">
-        <div class="container">
-            <h2 class="section-title">Signature Dishes</h2>
-            <div class="dishes-grid">
-                <div class="dish-card">
-                    <div class="dish-image" style="background-image: url('images/food/pork-chop.jpg')"></div>
-                    <div class="dish-content">
-                        <h3>Herbed Pork Chop</h3>
-                        <p>Bone-in loin chop with asparagus, new potatoes compote, smoked bacon</p>
-                        <span class="price">$43</span>
+        <!-- Featured Dishes -->
+        <section class="featured-dishes">
+            <div class="container">
+                <h2 class="section-title text-center">Signature Dishes</h2>
+                <p class="section-subtitle">Chef Duncan Williams' creations that define our culinary excellence</p>
+                
+                <div class="dishes-grid">
+                    <div class="dish-card">
+                        <div class="dish-image">
+                            <img src="images/dishes/shrimp-grits.jpg" alt="Shrimp & Grits" loading="lazy">
+                            <span class="dish-label">Most Popular</span>
+                        </div>
+                        <div class="dish-content">
+                            <h3>Shrimp & Grits</h3>
+                            <p>Sautéed shrimp in red-eye gravy with country ham, cremini mushrooms, tomatoes; served over Weisenberger grits.</p>
+                            <span class="dish-price">$19</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card">
+                        <div class="dish-image">
+                            <img src="images/dishes/bourbon-short-rib.jpg" alt="Bourbon-Braised Short Rib" loading="lazy">
+                            <span class="dish-label">Chef's Special</span>
+                        </div>
+                        <div class="dish-content">
+                            <h3>Bourbon-Braised Short Rib</h3>
+                            <p>Over whipped goat-cheese mashed potatoes with broccolini, sorghum bacon jam, and crispy tobacco onions.</p>
+                            <span class="dish-price">$53</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card">
+                        <div class="dish-image">
+                            <img src="images/dishes/lamb-chops.jpg" alt="Lamb Chops" loading="lazy">
+                            <span class="dish-label">Award Winning</span>
+                        </div>
+                        <div class="dish-content">
+                            <h3>Lamb Chops</h3>
+                            <p>Frenched and grilled lamb chops with caramelized-shallot potato gratin, haricots verts, rosemary-Dijon glace.</p>
+                            <span class="dish-price">$66</span>
+                        </div>
                     </div>
                 </div>
-                <div class="dish-card">
-                    <div class="dish-image" style="background-image: url('images/food/shrimp-grits.jpg')"></div>
-                    <div class="dish-content">
-                        <h3>Shrimp & Grits</h3>
-                        <p>Sautéed shrimp in red-eye gravy with country ham, cremini mushrooms</p>
-                        <span class="price">$19</span>
-                    </div>
-                </div>
-                <div class="dish-card">
-                    <div class="dish-image" style="background-image: url('images/food/lamb-chops.jpg')"></div>
-                    <div class="dish-content">
-                        <h3>Lamb Chops</h3>
-                        <p>Frenched and grilled with caramelized-shallot potato gratin</p>
-                        <span class="price">$66</span>
-                    </div>
+                
+                <div class="text-center">
+                    <a href="menu.html" class="btn btn-primary">View Full Menu</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- History Preview -->
-    <section class="history-preview">
-        <div class="container">
-            <div class="history-content">
-                <h2>Since 1933</h2>
-                <p>Founded by Jack Fry and his wife Flossie, Jack Fry's began as a sportsman's hangout and has evolved into one of Louisville's most beloved fine dining establishments, maintaining its historic charm while offering contemporary Southern cuisine.</p>
-                <a href="about.html" class="btn btn-outline">Read Our Story</a>
+        <!-- Testimonials -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title text-center">What Our Guests Say</h2>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"The ambiance, service, and food were all exceptional. The historic photos and original bar transport you to another era while the cuisine is beautifully modern."</p>
+                            <div class="testimonial-author">
+                                <strong>Sarah M.</strong>
+                                <span>Google Review ★★★★★</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left"></i>
+                            <p>"Our anniversary dinner was perfect. The pork chop was cooked to perfection, and the staff made us feel like family. Louisville's best-kept secret is no secret anymore!"</p>
+                            <div class="testimonial-author">
+                                <strong>Michael & Jessica R.</strong>
+                                <span>OpenTable Review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="awards-grid">
+                    <div class="award">
+                        <i class="fas fa-trophy"></i>
+                        <h4>Best Romantic Restaurant</h4>
+                        <p>Louisville Magazine 2024</p>
+                    </div>
+                    <div class="award">
+                        <i class="fas fa-star"></i>
+                        <h4>Best Fine Dining</h4>
+                        <p>Runner-Up 2024</p>
+                    </div>
+                    <div class="award">
+                        <i class="fas fa-glass-cheers"></i>
+                        <h4>Best Old Fashioned</h4>
+                        <p>LEO Weekly 2024</p>
+                    </div>
+                </div>
             </div>
-            <div class="history-image">
-                <img src="images/history/old-bar.jpg" alt="Original Jack Fry's bar from 1933">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Awards & Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Awards & Recognition</h2>
-            <div class="awards-grid">
-                <div class="award">
-                    <i class="fas fa-award"></i>
-                    <h3>Best Restaurant: Highlands</h3>
-                    <p>2025 Winner</p>
-                </div>
-                <div class="award">
-                    <i class="fas fa-heart"></i>
-                    <h3>Best Romantic Dinner</h3>
-                    <p>Multiple Years</p>
-                </div>
-                <div class="award">
-                    <i class="fas fa-cocktail"></i>
-                    <h3>Best Old Fashioned</h3>
-                    <p>2025 Winner</p>
-                </div>
-                <div class="award">
-                    <i class="fas fa-star"></i>
-                    <h3>Best Fine Dining</h3>
-                    <p>Runner-Up 2025</p>
+        <!-- Reservation CTA -->
+        <section class="reservation-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Experience Jack Fry's Legacy</h2>
+                    <p>Join us for an unforgettable dining experience. Reservations are highly recommended.</p>
+                    <div class="cta-buttons">
+                        <a href="reservations.html" class="btn btn-large btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book Online
+                        </a>
+                        <a href="tel:5024529244" class="btn btn-large btn-secondary">
+                            <i class="fas fa-phone"></i> Call (502) 452-9244
+                        </a>
+                    </div>
+                    <p class="cta-note"><i class="fas fa-info-circle"></i> Walk-ins welcome at our full-service bar</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Hours & Location -->
+        <section class="hours-location">
+            <div class="container">
+                <div class="hours-grid">
+                    <div class="hours-card">
+                        <h3><i class="fas fa-clock"></i> Hours</h3>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Lunch (Mon-Fri)</td>
+                                <td>11:00 AM – 2:30 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Dinner (Mon-Thu)</td>
+                                <td>5:30 PM – 10:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Dinner (Fri & Sat)</td>
+                                <td>5:30 PM – 11:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Dinner (Sunday)</td>
+                                <td>5:30 PM – 10:00 PM</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="location-card">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <address>
+                            1007 Bardstown Road<br>
+                            Louisville, KY 40204
+                        </address>
+                        <a href="location-contact.html#parking" class="parking-info">
+                            <i class="fas fa-parking"></i> Parking Information
+                        </a>
+                        <a href="https://maps.app.goo.gl/V75ZpBFhugjTWUVi9" target="_blank" class="btn btn-small">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3>Jack Fry's</h3>
+                    <h3>JACK FRY'S</h3>
                     <p class="tagline">"You're a stranger here, but once!"</p>
-                    <p>A Louisville institution since 1933, offering Southern-inspired fine dining in a historic setting.</p>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> 1007 Bardstown Road<br>Louisville, KY 40204</p>
-                    <p><i class="fas fa-phone"></i> (502) 452-9244</p>
-                    <p><i class="fas fa-envelope"></i> info@jackfrys.com</p>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Hours</h4>
-                    <p><strong>Lunch</strong><br>Monday-Friday: 11am-2:30pm</p>
-                    <p><strong>Dinner</strong><br>Mon-Thu: 5:30pm-10pm<br>Fri-Sat: 5:30pm-11pm<br>Sunday: 5:30pm-10pm</p>
+                    <p class="established">Established 1933</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-col">
                     <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="menu.html">View Menu</a></li>
-                        <li><a href="reservations.html">Make Reservation</a></li>
-                        <li><a href="giftcards.html">Gift Cards</a></li>
-                        <li><a href="accessibility.html">Accessibility</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                    <ul>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="reservations.html">Reservations</a></li>
+                        <li><a href="private-dining.html">Private Events</a></li>
+                        <li><a href="gift-cards.html">Gift Cards</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                     </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="location-contact.html">Location & Hours</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="testimonials.html">Reviews</a></li>
+                        <li><a href="blog.html">News & Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 1007 Bardstown Road</p>
+                        <p><i class="fas fa-phone"></i> (502) 452-9244</p>
+                        <p><i class="fas fa-envelope"></i> info@jackfrys.com</p>
+                    </address>
+                    <a href="location-contact.html#contact" class="btn btn-small">Contact Us</a>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
-                </div>
-                
-                <div class="legal-links">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="accessibility.html">Accessibility Statement</a>
-                    <span>&copy; 2024 Jack Fry's Restaurant. All rights reserved.</span>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Jack Fry's Restaurant. Proprietor: Stephanie J. Meeks. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms & Conditions</a>
+                        <a href="accessibility.html">Accessibility Statement</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
 </body>
-  </html>
+                    </html>
