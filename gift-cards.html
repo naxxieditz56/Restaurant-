@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards | Jack Fry's Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/gift-cards.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (Same as index.html) -->
+    <header class="main-header">
+        <!-- Navigation from index.html -->
+    </header>
+
+    <!-- Gift Cards Hero -->
+    <section class="page-hero gift-cards-hero">
+        <div class="container">
+            <h1>Gift Cards</h1>
+            <p>The perfect gift for any occasion</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="gift-cards-page">
+        <div class="container">
+            <!-- Gift Card Options -->
+            <section class="gift-card-options">
+                <h2 class="section-title text-center">Choose Your Gift</h2>
+                <p class="section-subtitle">Give the gift of an unforgettable dining experience at Jack Fry's</p>
+                
+                <div class="gift-card-grid">
+                    <!-- Digital Gift Card -->
+                    <div class="gift-card-option">
+                        <div class="gift-card-header">
+                            <i class="fas fa-desktop"></i>
+                            <h3>Digital Gift Card</h3>
+                        </div>
+                        <div class="gift-card-body">
+                            <ul class="gift-features">
+                                <li><i class="fas fa-check"></i> Delivered instantly via email</li>
+                                <li><i class="fas fa-check"></i> Customizable message</li>
+                                <li><i class="fas fa-check"></i> Print or use on mobile</li>
+                                <li><i class="fas fa-check"></i> Never expires</li>
+                                <li><i class="fas fa-check"></i> Available 24/7</li>
+                            </ul>
+                            
+                            <div class="amount-selection">
+                                <h4>Select Amount</h4>
+                                <div class="amount-buttons">
+                                    <button class="amount-btn" data-amount="50">$50</button>
+                                    <button class="amount-btn" data-amount="100">$100</button>
+                                    <button class="amount-btn" data-amount="150">$150</button>
+                                    <button class="amount-btn" data-amount="250">$250</button>
+                                    <button class="amount-btn" data-amount="500">$500</button>
+                                    <div class="custom-amount">
+                                        <input type="number" id="customAmount" placeholder="Other amount" min="25" step="25">
+                                        <span>$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary btn-block" onclick="selectDigitalCard()">
+                                <i class="fas fa-shopping-cart"></i> Purchase Digital Card
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Physical Gift Card -->
+                    <div class="gift-card-option featured">
+                        <div class="featured-badge">Most Popular</div>
+                        <div class="gift-card-header">
+                            <i class="fas fa-credit-card"></i>
+                            <h3>Physical Gift Card</h3>
+                        </div>
+                        <div class="gift-card-body">
+                            <div class="gift-card-preview">
+                                <div class="card-design">
+                                    <div class="card-front">
+                                        <div class="card-logo">JACK FRY'S</div>
+                                        <div class="card-amount">$100</div>
+                                        <div class="card-details">
+                                            <p>Since 1933</p>
+                                            <p>"You're a stranger here, but once!"</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <ul class="gift-features">
+                                <li><i class="fas fa-check"></i> Elegant embossed card</li>
+                                <li><i class="fas fa-check"></i> Custom gift envelope</li>
+                                <li><i class="fas fa-check"></i> Free shipping</li>
+                                <li><i class="fas fa-check"></i> 3-5 business day delivery</li>
+                                <li><i class="fas fa-check"></i> Never expires</li>
+                            </ul>
+                            
+                            <div class="amount-selection">
+                                <h4>Select Amount</h4>
+                                <div class="amount-buttons">
+                                    <button class="amount-btn active" data-amount="100">$100</button>
+                                    <button class="amount-btn" data-amount="150">$150</button>
+                                    <button class="amount-btn" data-amount="250">$250</button>
+                                    <button class="amount-btn" data-amount="500">$500</button>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary btn-block" onclick="selectPhysicalCard()">
+                                <i class="fas fa-gift"></i> Purchase Physical Card
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- In-Purchase Purchase -->
+                    <div class="gift-card-option">
+                        <div class="gift-card-header">
+                            <i class="fas fa-store"></i>
+                            <h3>Purchase In Person</h3>
+                        </div>
+                        <div class="gift-card-body">
+                            <div class="in-person-info">
+                                <div class="location-info">
+                                    <h4><i class="fas fa-map-marker-alt"></i> Visit Us</h4>
+                                    <address>
+                                        1007 Bardstown Road<br>
+                                        Louisville, KY 40204
+                                    </address>
+                                </div>
+                                
+                                <div class="hours-info">
+                                    <h4><i class="fas fa-clock"></i> Available During</h4>
+                                    <p>Restaurant Hours</p>
+                                    <p>Lunch: Mon-Fri 11AM-2:30PM</p>
+                                    <p>Dinner: Nightly from 5:30PM</p>
+                                </div>
+                                
+                                <div class="contact-info">
+                                    <h4><i class="fas fa-phone"></i> Questions?</h4>
+                                    <a href="tel:5024529244">(502) 452-9244</a>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-outline btn-block" onclick="window.location.href='location-contact.html'">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Purchase Form Modal -->
+            <div class="modal" id="purchaseModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Purchase Gift Card</h3>
+                        <button class="modal-close" onclick="hideModal()">&times;</button>
+                    </div>
+                    <form id="giftCardForm" class="modal-form">
+                        <div class="modal-body">
+                            <div class="gift-card-summary">
+                                <h4>Order Summary</h4>
+                                <div class="summary-details">
+                                    <p>Type: <span id="summaryType">Digital Gift Card</span></p>
+                                    <p>Amount: <span id="summaryAmount">$100</span></p>
+                                    <p class="total">Total: <span id="summaryTotal">$100</span></p>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h4>Recipient Information</h4>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="recipientName">Recipient Name *</label>
+                                        <input type="text" id="recipientName" name="recipientName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipientEmail">Recipient Email *</label>
+                                        <input type="email" id="recipientEmail" name="recipientEmail" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="giftMessage">Gift Message (Optional)</label>
+                                    <textarea id="giftMessage" name="giftMessage" rows="3" 
+                                              placeholder="Add a personal message..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h4>Your Information</h4>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="yourName">Your Name *</label>
+                                        <input type="text" id="yourName" name="yourName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="yourEmail">Your Email *</label>
+                                        <input type="email" id="yourEmail" name="yourEmail" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="deliveryDate">Delivery Date</label>
+                                    <input type="date" id="deliveryDate" name="deliveryDate" 
+                                           min="<?php echo date('Y-m-d'); ?>">
+                                    <small>For digital cards, select when you want it delivered</small>
+                                </div>
+                            </div>
+                            
+                            <div class="form-section">
+                                <h4>Payment Information</h4>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="cardNumber">Card Number *</label>
+                                        <input type="text" id="cardNumber" name="cardNumber" 
+                                               placeholder="1234 5678 9012 3456" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Expiry Date *</label>
+                                        <input type="text" id="expiryDate" name="expiryDate" 
+                                               placeholder="MM/YY" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="giftTerms" name="giftTerms" required>
+                                <label for="giftTerms">
+                                    I agree to the <a href="terms.html">gift card terms and conditions</a> *
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" onclick="hideModal()">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Complete Purchase</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <section class="gift-card-faq">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Do gift cards expire?</h3>
+                        <p>No, Jack Fry's gift cards never expire. They can be used anytime for dining in our restaurant.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Can I use a gift card for online orders?</h3>
+                        <p>Currently, gift cards can only be redeemed for in-restaurant dining. They cannot be used for takeout or delivery.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> What if I lose my gift card?</h3>
+                        <p>Please keep your gift card in a safe place. Lost or stolen cards cannot be replaced unless you have the card number and purchase receipt.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Can I check my gift card balance?</h3>
+                        <p>Yes, you can check your balance by calling us at (502) 452-9244 during restaurant hours.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Are there any fees?</h3>
+                        <p>No, there are no activation fees, maintenance fees, or expiration fees for our gift cards.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3><i class="fas fa-question-circle"></i> Can I use multiple gift cards?</h3>
+                        <p>Yes, you can use multiple gift cards for a single transaction. Any remaining balance will stay on the card for future use.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Corporate Gifting -->
+            <section class="corporate-gifting">
+                <div class="corporate-content">
+                    <div class="corporate-text">
+                        <h2>Corporate Gifting</h2>
+                        <p>Looking for the perfect corporate gift or client appreciation? Jack Fry's gift cards make excellent business gifts that impress.</p>
+                        <ul>
+                            <li>Bulk pricing available</li>
+                            <li>Custom messaging options</li>
+                            <li>Branded presentation</li>
+                            <li>Tax deductible business expense</li>
+                        </ul>
+                        <a href="mailto:info@jackfrys.com?subject=Corporate Gift Card Inquiry" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Inquire About Corporate Gifting
+                        </a>
+                    </div>
+                    <div class="corporate-image">
+                        <img src="images/gift-cards/corporate-gifting.jpg" alt="Corporate Gifting">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="main-footer">
+        <!-- Footer from index.html -->
+    </footer>
+
+    <script src="js/gift-cards.js"></script>
+    <script src="js/main.js"></script>
+</body>
+    </html>
