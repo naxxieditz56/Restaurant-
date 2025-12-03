@@ -1,0 +1,358 @@
+/* ===== Menu Page Styles ===== */
+
+/* Menu Hero */
+.menu-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/menu-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.menu-hero h1 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: var(--spacing-sm);
+}
+
+.menu-hero p {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-notes {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-md);
+}
+
+.menu-notes p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 0;
+}
+
+.menu-notes i {
+    color: var(--secondary-color);
+}
+
+/* Menu Navigation */
+.menu-navigation {
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 83px; /* Adjust based on header height */
+    z-index: 900;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    overflow-x: auto;
+    padding: 0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu-tab {
+    padding: 20px 25px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: var(--text-color);
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+}
+
+.menu-tab:hover,
+.menu-tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    background-color: var(--light-color);
+}
+
+/* Menu Sections */
+.menu-sections {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-color);
+}
+
+.menu-section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.menu-section.active {
+    display: block;
+}
+
+/* Menu Items Layout */
+.menu-items {
+    display: grid;
+    gap: var(--spacing-md);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background-color: white;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid transparent;
+    transition: var(--transition);
+}
+
+.menu-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.menu-item.highlighted {
+    border-left-color: var(--secondary-color);
+    background-color: #fffaf0;
+}
+
+.menu-item.featured {
+    border: 2px solid var(--secondary-color);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.item-header h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+.item-price {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    background-color: var(--light-color);
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.item-description {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Item Tags */
+.item-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 20px;
+}
+
+.tag.gluten-free {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.tag.vegetarian {
+    background-color: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.tag.vegan {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}
+
+.tag.popular {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+.tag.chefs-choice {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+/* Menu Grid for Featured Items */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.menu-item.featured .item-image {
+    position: relative;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    margin: -20px -20px 20px;
+}
+
+.menu-item.featured .item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feature-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.menu-item.featured .item-content {
+    padding: 0;
+}
+
+/* Menu Notice */
+.menu-notice {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notice-content {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+}
+
+.notice-content i {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.notice-content p {
+    margin-bottom: 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Dietary Legend */
+.dietary-legend {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.legend-color.gluten-free {
+    background-color: #e8f5e9;
+    border: 1px solid #2e7d32;
+}
+
+.legend-color.vegetarian {
+    background-color: #f3e5f5;
+    border: 1px solid #7b1fa2;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+    .menu-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .menu-hero p {
+        font-size: 1.2rem;
+    }
+    
+    .menu-tabs {
+        justify-content: flex-start;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .menu-navigation {
+        top: 70px;
+    }
+    
+    .menu-notes {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dietary-legend {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .item-price {
+        align-self: flex-start;
+    }
+    
+    .menu-tab {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+    }
