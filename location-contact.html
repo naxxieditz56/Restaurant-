@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location & Contact | Jack Fry's Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/location-contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (Same as index.html) -->
+    <header class="main-header">
+        <!-- Navigation from index.html -->
+    </header>
+
+    <!-- Location Hero -->
+    <section class="page-hero location-hero">
+        <div class="container">
+            <h1>Location & Contact</h1>
+            <p>Find us in the heart of Louisville's historic Highlands neighborhood</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="location-contact-page">
+        <div class="container">
+            <div class="location-grid">
+                <!-- Map Section -->
+                <div class="map-section">
+                    <div class="map-container">
+                        <div id="googleMap"></div>
+                        <div class="map-overlay">
+                            <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+                            <address>
+                                1007 Bardstown Road<br>
+                                Louisville, KY 40204
+                            </address>
+                            <a href="https://maps.app.goo.gl/V75ZpBFhugjTWUVi9" target="_blank" class="btn btn-small">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info-section">
+                    <div class="contact-info-card">
+                        <h2 class="section-title">Contact Information</h2>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <a href="tel:5024529244">(502) 452-9244</a>
+                                <p>For reservations and inquiries</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <a href="mailto:info@jackfrys.com">info@jackfrys.com</a>
+                                <p>General inquiries and feedback</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Hours</h3>
+                                <table class="hours-table">
+                                    <tr>
+                                        <td>Lunch (Mon-Fri)</td>
+                                        <td>11:00 AM – 2:30 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dinner (Mon-Thu)</td>
+                                        <td>5:30 PM – 10:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dinner (Fri & Sat)</td>
+                                        <td>5:30 PM – 11:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dinner (Sunday)</td>
+                                        <td>5:30 PM – 10:00 PM</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Ownership</h3>
+                                <p>Proprietor: Stephanie J. Meeks</p>
+                                <p>Meeks, LLC</p>
+                                <small>Since 2008</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Parking Information -->
+            <section class="parking-section" id="parking">
+                <h2 class="section-title">Parking Information</h2>
+                
+                <div class="parking-options">
+                    <div class="parking-option">
+                        <div class="parking-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Valet Parking</h3>
+                        <p><strong>Available:</strong> Friday & Saturday evenings</p>
+                        <p><strong>Cost:</strong> $10 per car</p>
+                        <p><strong>Hours:</strong> 5:00 PM - Close</p>
+                    </div>
+                    
+                    <div class="parking-option">
+                        <div class="parking-icon">
+                            <i class="fas fa-parking"></i>
+                        </div>
+                        <h3>Guest Parking Lot</h3>
+                        <p>Small lot reserved for guests to the right of the building</p>
+                        <p><em>Limited spaces available</em></p>
+                    </div>
+                    
+                    <div class="parking-option">
+                        <div class="parking-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <h3>Street Parking</h3>
+                        <p>Free street parking available on:</p>
+                        <ul>
+                            <li>Bardstown Road</li>
+                            <li>Baxter Avenue</li>
+                            <li>Highland Avenue (free after 6 PM)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="parking-option">
+                        <div class="parking-icon warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Important Notice</h3>
+                        <p>Please avoid parking in adjacent business lots. These are monitored and unauthorized vehicles may be towed.</p>
+                    </div>
+                </div>
+                
+                <div class="parking-map-note">
+                    <p><i class="fas fa-map"></i> View our <a href="images/parking-map.jpg" target="_blank">parking map</a> for detailed parking locations and restrictions.</p>
+                </div>
+            </section>
+            
+            <!-- Contact Form -->
+            <section class="contact-form-section">
+                <div class="contact-form-container">
+                    <div class="form-intro">
+                        <h2>Send Us a Message</h2>
+                        <p>Have questions, feedback, or special requests? We'd love to hear from you.</p>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Your Name *</label>
+                                <input type="text" id="contactName" name="contactName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" name="contactEmail" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number</label>
+                            <input type="tel" id="contactPhone" name="contactPhone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <select id="contactSubject" name="contactSubject" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="reservation">Reservation Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="private-event">Private Event Inquiry</option>
+                                <option value="gift-cards">Gift Card Question</option>
+                                <option value="allergies">Dietary Restrictions/Allergies</option>
+                                <option value="accessibility">Accessibility Needs</option>
+                                <option value="press">Press/Media Inquiry</option>
+                                <option value="employment">Employment Opportunity</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="6" required 
+                                      placeholder="Please include any relevant details such as date of visit, reservation number, or specific requests..."></textarea>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="contactConsent" name="contactConsent" required>
+                            <label for="contactConsent">
+                                I consent to Jack Fry's contacting me regarding my inquiry
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        
+                        <p class="form-note">
+                            <i class="fas fa-info-circle"></i> For immediate assistance with reservations, please call (502) 452-9244
+                        </p>
+                    </form>
+                </div>
+            </section>
+            
+            <!-- Neighborhood Info -->
+            <section class="neighborhood-section">
+                <h2 class="section-title">The Highlands Neighborhood</h2>
+                
+                <div class="neighborhood-content">
+                    <div class="neighborhood-text">
+                        <h3>Historic Charm Meets Modern Dining</h3>
+                        <p>Jack Fry's is proud to be part of Louisville's vibrant Highlands neighborhood, known for its historic architecture, independent shops, and diverse dining scene.</p>
+                        
+                        <div class="neighborhood-features">
+                            <div class="feature">
+                                <i class="fas fa-landmark"></i>
+                                <span>Historic District</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Local Boutiques</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-music"></i>
+                                <span>Live Music Venues</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-wine-glass-alt"></i>
+                                <span>Wine & Cocktail Bars</span>
+                            </div>
+                        </div>
+                        
+                        <p>Before or after your meal, we encourage you to explore the unique character of the Highlands. Our staff can provide recommendations for nearby attractions.</p>
+                    </div>
+                    <div class="neighborhood-map">
+                        <img src="images/highlands-map.jpg" alt="Highlands Neighborhood Map" loading="lazy">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="main-footer">
+        <!-- Footer from index.html -->
+    </footer>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="js/location.js"></script>
+    <script src="js/main.js"></script>
+</body>
+                              </html>
