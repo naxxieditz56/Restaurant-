@@ -1,80 +1,84 @@
-// Menu Tab Functionality
+// Menu Page Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Tab Navigation
     const menuTabs = document.querySelectorAll('.menu-tab');
     const menuSections = document.querySelectorAll('.menu-section');
     
     menuTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const tabId = this.getAttribute('data-tab');
+        tab.addEventListener('click', function(e) {
+            e.preventDefault();
             
-            // Update active tab
+            // Remove active class from all tabs and sections
             menuTabs.forEach(t => t.classList.remove('active'));
+            menuSections.forEach(s => s.classList.remove('active'));
+            
+            // Add active class to clicked tab
             this.classList.add('active');
             
             // Show corresponding section
-            menuSections.forEach(section => {
-                section.classList.remove('active');
-                if (section.id === tabId) {
-                    section.classList.add('active');
-                }
-            });
-            
-            // Scroll to menu
-            document.querySelector('.menu-nav').scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                
+                // Smooth scroll to section
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
     });
     
-    // Dietary filter toggle (if implemented)
-    const dietaryFilters = document.querySelectorAll('.dietary-filter');
-    if (dietaryFilters.length > 0) {
-        dietaryFilters.forEach(filter => {
-            filter.addEventListener('change', function() {
-                filterMenuItems();
-            });
-        });
-    }
-    
-    function filterMenuItems() {
-        const activeFilters = Array.from(dietaryFilters)
-            .filter(f => f.checked)
-            .map(f => f.value);
-        
-        const menuItems = document.querySelectorAll('.menu-item');
-        
-        menuItems.forEach(item => {
-            if (activeFilters.length === 0) {
-                item.style.display = 'block';
-                return;
-            }
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
             
-            const itemDietary = Array.from(item.querySelectorAll('.dietary'))
-                .map(d => d.textContent.trim().toLowerCase());
-            
-            const hasFilter = activeFilters.some(filter => 
-                itemDietary.some(diet => diet.includes(filter))
-            );
-            
-            item.style.display = hasFilter ? 'block' : 'none';
-        });
-    }
-    
-    // Menu item animation on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animated');
+            e.preventDefault();
+            const targetElement = document.querySelector(href);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
-    }, observerOptions);
+    });
     
-    document.querySelectorAll('.menu-item').forEach(item => {
-        observer.observe(item);
+    // Sticky menu navigation
+    const menuNav = document.querySelector('.menu-navigation');
+    const header = document.querySelector('.main-header');
+    
+    window.addEventListener('scroll', function() {
+        const headerHeight = header.offsetHeight;
+        const scrollPosition = window.scrollY;
+        
+        if (scrollPosition > headerHeight) {
+            menuNav.style.top = '0';
+        } else {
+            menuNav.style.top = `${headerHeight}px`;
+        }
+    });
+    
+    // Highlight active section based on scroll
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY + 100;
+        
+        menuSections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                const sectionId = section.getAttribute('id');
+                menuTabs.forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.getAttribute('href') === `#${sectionId}`) {
+                        tab.classList.add('active');
+                    }
+                });
+            }
+        });
     });
 });
