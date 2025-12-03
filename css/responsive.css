@@ -1,0 +1,703 @@
+/* ===== Responsive Design ===== */
+
+/* Extra Large Screens (>= 1400px) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .dishes-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Large Screens (1200px - 1399px) */
+@media (max-width: 1399px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+/* Desktop (992px - 1199px) */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .intro-grid {
+        gap: var(--spacing-md);
+    }
+    
+    .dishes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+    
+    /* Reservations Page */
+    .reservations-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .reservation-info-sidebar {
+        order: -1;
+    }
+    
+    /* Gallery Page */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Gift Cards Page */
+    .gift-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gift-card-option:last-child {
+        grid-column: span 2;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Tablet Landscape (768px - 991px) */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* Header & Navigation */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 100px var(--spacing-md) var(--spacing-md);
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        overflow-y: auto;
+    }
+    
+    .main-nav.active {
+        right: 0;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+    
+    .nav-list li {
+        width: 100%;
+    }
+    
+    .nav-list a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .menu-dropdown .dropdown-content {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background-color: transparent;
+        border-left: 2px solid var(--border-color);
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    
+    .nav-cta {
+        flex-direction: column;
+        width: 100%;
+        margin-top: var(--spacing-md);
+    }
+    
+    /* Hero Section */
+    .hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .hero-features {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        padding: 15px 0;
+    }
+    
+    /* Intro Section */
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .intro-content {
+        padding-right: 0;
+    }
+    
+    /* Featured Dishes */
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Testimonials */
+    .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* Menu Page */
+    .menu-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Gallery Page */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .video-container {
+        flex-direction: column;
+    }
+    
+    /* Testimonials Page */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ratings-summary {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .review-platforms {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Location Page */
+    .location-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .parking-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Accessibility Page */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .detailed-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .policies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet Portrait (576px - 767px) */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    /* Typography */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Dishes */
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* CTA Buttons */
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    /* Hours & Location */
+    .hours-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Menu Page */
+    .menu-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .menu-notes {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .menu-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+    
+    /* Reservations Page */
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .policy-list li {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Gift Cards Page */
+    .gift-card-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gift-card-option:last-child {
+        grid-column: span 1;
+        max-width: 100%;
+    }
+    
+    .corporate-content {
+        flex-direction: column;
+    }
+    
+    /* Gallery Page */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Testimonials Page */
+    .review-platforms {
+        grid-template-columns: 1fr;
+    }
+    
+    .press-timeline .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .timeline-year {
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    /* Location Page */
+    .parking-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .neighborhood-content {
+        flex-direction: column;
+    }
+    
+    /* Accessibility Page */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .policies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .emergency-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Mobile (<= 575px) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 var(--spacing-xs);
+    }
+    
+    /* Typography */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    /* Hero */
+    .hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    /* Stats */
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Menu Page */
+    .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .item-price {
+        align-self: flex-start;
+    }
+    
+    .menu-tab {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Reservations Page */
+    .info-card {
+        padding: var(--spacing-sm);
+    }
+    
+    .special-events-notice {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Gift Cards Page */
+    .amount-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .custom-amount {
+        grid-column: span 2;
+    }
+    
+    /* Testimonials Page */
+    .testimonial-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .testimonials-filter {
+        flex-wrap: wrap;
+    }
+    
+    /* Forms */
+    .modal-content {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    /* Buttons */
+    .btn-large {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    /* Footer */
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .legal-links {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+}
+
+/* Small Mobile (<= 375px) */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .menu-tab {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .filter-list {
+        gap: 5px;
+    }
+    
+    .filter-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .main-header,
+    .main-footer,
+    .hero-features,
+    .cta-buttons,
+    .reservation-form,
+    .gallery-filter,
+    .testimonials-filter,
+    .contact-form,
+    .needs-form {
+        display: none !important;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    h1, h2, h3, h4 {
+        color: #000 !important;
+    }
+    
+    a {
+        color: #000 !important;
+        text-decoration: none;
+    }
+    
+    .content-card {
+        box-shadow: none !important;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+    }
+    
+    .hours-table td {
+        padding: 5px 0;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #000;
+        --secondary-color: #000;
+        --text-color: #000;
+        --border-color: #000;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .hero-content {
+        background: white;
+        color: black;
+        padding: 20px;
+        border: 3px solid black;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-color: #1a1a1a;
+        --dark-color: #ffffff;
+        --text-color: #e0e0e0;
+        --text-light: #b0b0b0;
+        --border-color: #444;
+    }
+    
+    body {
+        background: var(--light-color);
+        color: var(--text-color);
+    }
+    
+    .main-header {
+        background: #222;
+    }
+    
+    .content-card {
+        background: #222;
+    }
+    
+    .btn-outline {
+        border-color: var(--text-color);
+        color: var(--text-color);
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) and (pointer: coarse) {
+    .menu-dropdown:hover .dropdown-content {
+        display: none;
+    }
+    
+    .menu-dropdown:focus-within .dropdown-content,
+    .menu-dropdown:active .dropdown-content {
+        display: block;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    .dish-card:hover {
+        transform: none;
+    }
+    
+    .feature:hover {
+        transform: none;
+    }
+    
+    /* Increase touch target sizes */
+    .nav-list a,
+    .btn,
+    .filter-btn,
+    .menu-tab {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    input,
+    select,
+    textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Landscape Orientation */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 0;
+    }
+    
+    .main-nav {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .modal-content {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}
+
+/* Very Large Screens */
+@media (min-width: 2000px) {
+    .container {
+        max-width: 1800px;
+    }
+    
+    html {
+        font-size: 18px;
+    }
+    
+    .hero-title {
+        font-size: 5rem;
+    }
+      }
