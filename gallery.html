@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Jack Fry's Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (Same as index.html) -->
+    <header class="main-header">
+        <!-- Navigation from index.html -->
+    </header>
+
+    <!-- Gallery Hero -->
+    <section class="page-hero gallery-hero">
+        <div class="container">
+            <h1>Gallery</h1>
+            <p>Experience the ambiance, cuisine, and history of Jack Fry's</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="gallery-page">
+        <div class="container">
+            <!-- Gallery Navigation -->
+            <nav class="gallery-filter">
+                <ul class="filter-list">
+                    <li><a href="#" class="filter-btn active" data-filter="all">All</a></li>
+                    <li><a href="#" class="filter-btn" data-filter="food">Food</a></li>
+                    <li><a href="#" class="filter-btn" data-filter="interior">Interior</a></li>
+                    <li><a href="#" class="filter-btn" data-filter="bar">Bar</a></li>
+                    <li><a href="#" class="filter-btn" data-filter="historic">Historic</a></li>
+                    <li><a href="#" class="filter-btn" data-filter="events">Events</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Food Images -->
+                <div class="gallery-item food" data-category="food">
+                    <div class="gallery-image">
+                        <img src="images/gallery/food/shrimp-grits.jpg" alt="Shrimp & Grits" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Shrimp & Grits</h3>
+                                <p>Our signature dish with Weisenberger grits</p>
+                            </div>
+                            <button class="view-btn" onclick="openLightbox(0)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item food" data-category="food">
+                    <div class="gallery-image">
+                        <img src="images/gallery/food/steak.jpg" alt="New York Strip" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>New York Strip</h3>
+                                <p>Pan-seared with gorgonzola cream sauce</p>
+                            </div>
+                            <button class="view-btn" onclick="openLightbox(1)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interior Images -->
+                <div class="gallery-item interior" data-category="interior">
+                    <div class="gallery-image">
+                        <img src="images/gallery/interior/dining-room.jpg" alt="Main Dining Room" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Main Dining Room</h3>
+                                <p>Elegant Southern dining ambiance</p>
+                            </div>
+                            <button class="view-btn" onclick="openLightbox(2)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item interior" data-category="interior">
+                    <div class="gallery-image">
+                        <img src="images/gallery/interior/table-setting.jpg" alt="Table Setting" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Table Setting</h3>
+                                <p>Fine dining presentation</p>
+                            </div>
+                            <button class="view-btn" onclick="openLightbox(3)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bar Images -->
+                <div class="gallery-item bar" data-category="bar">
+                    <div class="gallery-image">
+                        <img src="images/gallery/bar/main-bar.jpg" alt="Historic Bar" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Original 1933 Bar</h3>
+                                <p>Still serving guests after 90+ years</p>
+                            </div>
+                            <button class="view-btn" onclick="openLightbox(4)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item bar" data-category="bar">
+                    <div class="gallery-image">
+                        <img src="images/gallery/bar/cocktails.jpg" alt="Craft Cocktails" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Craft Cocktails</h3>
+                                <p>Our award-winning Old Fashioned</p>
+                            </div>
+                            <button class="view-btn" onclick="openLightbox(5)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Historic Images -->
+                <div class="gallery-item historic" data-category="historic">
+                    <div class="gallery-image">
+                        <img src="images/gallery/historic/jack-flossie.jpg" alt="Jack & Flossie Fry" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Jack & Flossie Fry</h3>
+                                <p>Founders in the 1930s</p>
+                            </div>
+                            <button class="view-btn" onclick="openLightbox(6)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item historic" data-category="historic">
+                    <div class="gallery-image">
+                        <img src="images/gallery/historic/old-photos.jpg" alt="Historic Wall Photos" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Historic Wall</h3>
+                                <p>Photos from the 1930s-1950s</p>
+                            </div>
+                            <button class="view-btn" onclick="openLightbox(7)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Images -->
+                <div class="gallery-item events" data-category="events">
+                    <div class="gallery-image">
+                        <img src="images/gallery/events/anniversary-dinner.jpg" alt="Anniversary Celebration" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="overlay-content">
+                                <h3>Anniversary Dinner</h3>
+                                <p>Celebrating special moments</p>
+                            </div>
+                            <button class="view-btn" onclick="openLightbox(8)">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More images would be added here -->
+            </div>
+            
+            <!-- Video Tour -->
+            <section class="video-tour">
+                <h2 class="section-title">Virtual Tour</h2>
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <p>Take a virtual tour of Jack Fry's</p>
+                        </div>
+                        <!-- Actual video would be embedded here -->
+                    </div>
+                    <div class="video-info">
+                        <h3>Experience Our Atmosphere</h3>
+                        <p>Get a sneak peek of our historic dining rooms, original bar, and the ambiance that makes Jack Fry's a Louisville institution.</p>
+                        <a href="about.html" class="btn btn-outline">Learn About Our History</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Press Gallery -->
+            <section class="press-gallery">
+                <h2 class="section-title">Press & Recognition</h2>
+                <div class="press-grid">
+                    <div class="press-item">
+                        <img src="images/press/louisville-magazine.jpg" alt="Louisville Magazine">
+                        <h4>Best Romantic Restaurant</h4>
+                        <p>Louisville Magazine 2024</p>
+                    </div>
+                    <div class="press-item">
+                        <img src="images/press/leo-weekly.jpg" alt="LEO Weekly">
+                        <h4>Best Old Fashioned</h4>
+                        <p>LEO Weekly 2024</p>
+                    </div>
+                    <div class="press-item">
+                        <img src="images/press/tripadvisor.jpg" alt="TripAdvisor">
+                        <h4>Travelers' Choice</h4>
+                        <p>TripAdvisor 2023</p>
+                    </div>
+                    <div class="press-item">
+                        <img src="images/press/southern-living.jpg" alt="Southern Living">
+                        <h4>Featured in Southern Living</h4>
+                        <p>2023 Feature</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav prev" onclick="changeImage(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav next" onclick="changeImage(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+                <div class="image-counter">
+                    <span id="current-image">1</span> / <span id="total-images">12</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="main-footer">
+        <!-- Footer from index.html -->
+    </footer>
+
+    <script src="js/gallery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+  </html>
