@@ -1,123 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head as index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservations | Jack Fry's Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/reservations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Same header as index.html -->
-    
-    <main class="page-content">
-        <!-- Hero Section -->
-        <section class="page-hero" style="background-image: url('images/interior/reservations.jpg');">
-            <div class="container">
-                <h1>Reservations</h1>
-                <p>Book your table for an unforgettable dining experience</p>
-            </div>
-        </section>
+    <!-- Header (Same as index.html) -->
+    <header class="main-header">
+        <!-- Navigation from index.html -->
+    </header>
 
-        <!-- Reservation Form/Widget -->
-        <section class="reservation-section">
-            <div class="container">
-                <div class="reservation-wrapper">
-                    <!-- OpenTable Widget -->
-                    <div class="opentable-widget">
-                        <h2>Book Online</h2>
-                        <!-- OpenTable iframe or custom form -->
-                        <div class="reservation-form">
-                            <form id="reservation-form">
-                                <div class="form-grid">
-                                    <div class="form-group">
-                                        <label for="date">Date *</label>
-                                        <input type="date" id="date" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="time">Time *</label>
-                                        <select id="time" required>
-                                            <option value="">Select Time</option>
-                                            <option value="17:30">5:30 PM</option>
-                                            <option value="18:00">6:00 PM</option>
-                                            <option value="18:30">6:30 PM</option>
-                                            <!-- More times -->
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="party-size">Party Size *</label>
-                                        <select id="party-size" required>
-                                            <option value="">Number of Guests</option>
-                                            <option value="1">1 Person</option>
-                                            <option value="2">2 People</option>
-                                            <option value="3">3 People</option>
-                                            <!-- Up to 14 -->
-                                        </select>
-                                    </div>
-                                </div>
+    <!-- Reservation Hero -->
+    <section class="page-hero reservations-hero">
+        <div class="container">
+            <h1>Make a Reservation</h1>
+            <p>Secure your table at Louisville's historic fine dining destination</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="reservations-page">
+        <div class="container">
+            <div class="reservations-grid">
+                <!-- Online Reservation Form -->
+                <div class="reservation-form-section">
+                    <h2 class="section-title">Book Your Table</h2>
+                    
+                    <div class="reservation-form-container">
+                        <form id="reservationForm" class="reservation-form">
+                            <div class="form-row">
                                 <div class="form-group">
-                                    <label for="special-requests">Special Requests</label>
-                                    <textarea id="special-requests" rows="3" placeholder="Accessibility needs, allergies, celebrations..."></textarea>
+                                    <label for="partySize">Party Size *</label>
+                                    <select id="partySize" name="partySize" required>
+                                        <option value="" disabled selected>Select party size</option>
+                                        <option value="1">1 person</option>
+                                        <option value="2">2 people</option>
+                                        <option value="3">3 people</option>
+                                        <option value="4">4 people</option>
+                                        <option value="5">5 people</option>
+                                        <option value="6">6 people</option>
+                                        <option value="7">7 people</option>
+                                        <option value="8">8 people</option>
+                                        <option value="9">9 people</option>
+                                        <option value="10">10 people</option>
+                                        <option value="11-14">11-14 people</option>
+                                    </select>
+                                    <small>For parties larger than 14, please call us</small>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Check Availability</button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!-- Alternative Booking -->
-                    <div class="alternative-booking">
-                        <h2>Other Ways to Book</h2>
-                        <div class="booking-option">
-                            <i class="fas fa-phone"></i>
-                            <h3>By Phone</h3>
-                            <p>Call us at <a href="tel:5024529244">(502) 452-9244</a></p>
-                            <p class="note">Our host team is available during business hours</p>
-                        </div>
-                        <div class="booking-option">
-                            <i class="fas fa-walking"></i>
-                            <h3>Walk-Ins Welcome</h3>
-                            <p>Bar seating available first-come, first-served</p>
-                            <p class="note">Full dining service at the bar</p>
+                                
+                                <div class="form-group">
+                                    <label for="reservationDate">Date *</label>
+                                    <input type="date" id="reservationDate" name="reservationDate" required 
+                                           min="<?php echo date('Y-m-d'); ?>">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reservationTime">Time *</label>
+                                    <select id="reservationTime" name="reservationTime" required>
+                                        <option value="" disabled selected>Select time</option>
+                                        <!-- Times will be populated by JavaScript -->
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="preferredArea">Preferred Area</label>
+                                    <select id="preferredArea" name="preferredArea">
+                                        <option value="" selected>No preference</option>
+                                        <option value="main-dining">Main Dining Room</option>
+                                        <option value="bar-area">Bar Area</option>
+                                        <option value="window">Window Table</option>
+                                        <option value="booth">Booth</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <h3 class="form-section-title">Contact Information</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="specialRequests">Special Requests</label>
+                                <textarea id="specialRequests" name="specialRequests" rows="4" 
+                                          placeholder="Celebrating a special occasion? Dietary restrictions? Let us know..."></textarea>
+                                <small>Please note any food allergies in advance</small>
+                            </div>
+                            
+                            <div class="form-checkbox">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">
+                                    I agree to the <a href="terms.html">reservation terms</a> and understand there may be charges for no-shows or late cancellations *
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-calendar-check"></i> Complete Reservation
+                            </button>
+                            
+                            <p class="form-note">
+                                <i class="fas fa-info-circle"></i> You'll receive a confirmation email within 15 minutes
+                            </p>
+                        </form>
+                        
+                        <div class="form-success" id="successMessage" style="display: none;">
+                            <div class="success-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Reservation Confirmed!</h3>
+                            <p>Thank you for your reservation. We've sent a confirmation to your email.</p>
+                            <p><strong>Reservation ID:</strong> <span id="reservationId"></span></p>
+                            <button class="btn btn-outline" onclick="resetForm()">Make Another Reservation</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Policies -->
-        <section class="reservation-policies">
-            <div class="container">
-                <h2 class="section-title">Reservation Policies</h2>
-                <div class="policies-grid">
-                    <div class="policy">
-                        <h3><i class="fas fa-users"></i> Group Size</h3>
-                        <p>We accommodate parties up to 14 guests. For larger groups, please contact us about private events.</p>
+                
+                <!-- Reservation Info Sidebar -->
+                <div class="reservation-info-sidebar">
+                    <div class="info-card">
+                        <h3><i class="fas fa-phone"></i> Phone Reservations</h3>
+                        <p>Prefer to book by phone? Call us at:</p>
+                        <a href="tel:5024529244" class="phone-number">(502) 452-9244</a>
+                        <p class="hours-note">Available during restaurant hours</p>
                     </div>
-                    <div class="policy">
-                        <h3><i class="fas fa-clock"></i> Time Slots</h3>
-                        <p>Reservations are held for 15 minutes past your booking time. Please call if running late.</p>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-clock"></i> Hours</h3>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Lunch (Mon-Fri)</td>
+                                <td>11:00 AM – 2:30 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Dinner (Mon-Thu)</td>
+                                <td>5:30 PM – 10:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Dinner (Fri & Sat)</td>
+                                <td>5:30 PM – 11:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Dinner (Sunday)</td>
+                                <td>5:30 PM – 10:00 PM</td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="policy">
-                        <h3><i class="fas fa-wheelchair"></i> Accessibility</h3>
-                        <p>Please inform us of any accessibility needs when booking so we can ensure appropriate seating.</p>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-info-circle"></i> Policies</h3>
+                        <ul class="policy-list">
+                            <li>
+                                <i class="fas fa-user-friends"></i>
+                                <div>
+                                    <strong>Large Parties</strong>
+                                    <p>We cannot accommodate parties larger than 14 people</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-utensils"></i>
+                                <div>
+                                    <strong>Splitting Entrées</strong>
+                                    <p>$5 charge for splitting main courses</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-ban"></i>
+                                <div>
+                                    <strong>Cancellation</strong>
+                                    <p>Please cancel at least 2 hours before your reservation</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-wheelchair"></i>
+                                <div>
+                                    <strong>Accessibility</strong>
+                                    <p>Fully accessible - inform us of any special needs</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="policy">
-                        <h3><i class="fas fa-utensils"></i> Special Occasions</h3>
-                        <p>Celebrating? Let us know! We'll do our best to make your occasion memorable.</p>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-parking"></i> Parking</h3>
+                        <p>Valet parking available Friday & Saturday evenings for $10/car</p>
+                        <p>Street parking available on Bardstown Road and Baxter Avenue</p>
+                        <a href="location-contact.html#parking" class="btn btn-small btn-outline">More Parking Info</a>
+                    </div>
+                    
+                    <div class="info-card walk-in-info">
+                        <h3><i class="fas fa-glass-cheers"></i> Walk-Ins Welcome</h3>
+                        <p>Can't get a reservation? Our bar offers full-service dining on a first-come, first-served basis.</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Holiday Booking -->
-        <section class="holiday-booking">
-            <div class="container">
-                <div class="holiday-notice">
-                    <h3><i class="fas fa-star"></i> Special Event Bookings</h3>
-                    <p><strong>Kentucky Derby Week:</strong> Reservations are taken only via phone during this period. Please call (502) 452-9244 for Derby week bookings.</p>
+            
+            <!-- Special Events Notice -->
+            <div class="special-events-notice">
+                <div class="notice-icon">
+                    <i class="fas fa-calendar-star"></i>
+                </div>
+                <div class="notice-content">
+                    <h3>Special Events & Holidays</h3>
+                    <p>For reservations during Kentucky Derby Week, Valentine's Day, or other major holidays, please call us directly at <strong>(502) 452-9244</strong>. Online reservations may not be available for these dates.</p>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
-    <!-- Same footer as index.html -->
+    <!-- Footer (Same as index.html) -->
+    <footer class="main-footer">
+        <!-- Footer from index.html -->
+    </footer>
+
+    <!-- JavaScript -->
     <script src="js/reservations.js"></script>
+    <script src="js/main.js"></script>
 </body>
-</html>
+                                        </html>
